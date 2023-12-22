@@ -87,7 +87,7 @@ class BluetoothDevice {
   ///        because it relies on the internal scheduling of background scans.
   Future<void> connect({
     Duration timeout = const Duration(seconds: 35),
-    int? mtu = 512,
+    int? mtu,
     bool autoConnect = false,
   }) async {
     // If you hit this assert, you must set `mtu:null`, i.e `device.connect(mtu:null, autoConnect:true)`
